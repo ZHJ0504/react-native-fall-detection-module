@@ -2,6 +2,9 @@
 
 Fall Detection Library
 
+## Disclaimer
+This library may not work
+
 ## Installation
 
 ```sh
@@ -25,3 +28,6 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 ## License
 
 MIT
+
+# Acknowledgement
+This library is adapted from [here](https://github.com/altermarkive/experimental-fall-detector-android-app)

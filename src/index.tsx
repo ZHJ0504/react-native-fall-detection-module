@@ -1,4 +1,4 @@
-import { NativeModules, Platform } from 'react-native';
+import { NativeModules, Platform, NativeEventEmitter } from 'react-native';
 
 const LINKING_ERROR =
   `The package 'react-native-fall-detection-module' doesn't seem to be linked. Make sure: \n\n` +
@@ -17,6 +17,19 @@ const FallDetectionModule = NativeModules.FallDetectionModule
       }
     );
 
+export const FallDetectionEmitter = new NativeEventEmitter(FallDetectionModule);
 export function multiply(a: number, b: number): Promise<number> {
   return FallDetectionModule.multiply(a, b);
+}
+
+export function setUpdateInterval(updateInterval: number) {
+  FallDetectionModule.setUpdateInterval(updateInterval);
+}
+
+export function start() {
+  FallDetectionModule.startUpdates();
+}
+
+export function stop() {
+  FallDetectionModule.stopUpdates();
 }
