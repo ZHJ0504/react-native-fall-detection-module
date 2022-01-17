@@ -18,9 +18,6 @@ const FallDetectionModule = NativeModules.FallDetectionModule
     );
 
 export const FallDetectionEmitter = new NativeEventEmitter(FallDetectionModule);
-export function multiply(a: number, b: number): Promise<number> {
-  return FallDetectionModule.multiply(a, b);
-}
 
 export function setUpdateInterval(updateInterval: number) {
   FallDetectionModule.setUpdateInterval(updateInterval);

@@ -7,7 +7,6 @@ import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.util.Log
 import com.facebook.react.bridge.Arguments
-import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
@@ -291,11 +290,6 @@ class FallDetectionModuleModule(private val reactContext: ReactApplicationContex
         } catch (e: RuntimeException) {
             Log.e("ERROR", "java.lang.RuntimeException: Trying to invoke Javascript before CatalystInstance has been set!")
         }
-    }
-
-    @ReactMethod
-    fun multiply(a: Int, b: Int, promise: Promise) {
-        promise.resolve(a * b)
     }
 
     @ReactMethod
