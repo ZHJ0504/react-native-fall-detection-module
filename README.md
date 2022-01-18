@@ -2,10 +2,12 @@
 
 Fall Detection Library
 
-To prevent the overloading of the react native bridge with the need to update the sensors value when trying to detect a fall using a typical acceleration and gyroscope sensor library, this library will only send events through the react native bridge when a fall is detected
+When using a typical react native sensors library to try to detect a fall, we will need to set the update interval to < 100ms. However, this will cause the react native bridge to be overloaded. As such, the processing of the sensors data cannot be done in the React Native code.
+As a solution, this library will only send events through the react native bridge when a fall is detected
 
-## Disclaimer
-This library may not work
+## Compatibility
+
+Compatible with android only. If anyone would like to contribute to the IOS version of the code, please feel free to contribute to this project!
 
 ## Installation
 
