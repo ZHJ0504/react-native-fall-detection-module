@@ -19,6 +19,7 @@ export default function App() {
       setData(newData);
     });
   }, []);
+  setTimeout(() => setData(null), 2000); // to reset the data
 
   return (
     <View style={styles.container}>

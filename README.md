@@ -3,7 +3,7 @@
 Fall Detection Library
 
 When using a typical react native sensors library to try to detect a fall, we will need to set the update interval to < 100ms. However, this will cause the react native bridge to be overloaded. As such, the processing of the sensors data cannot be done in the React Native code.
-As a solution, this library will only send events through the react native bridge when a fall is detected
+As a solution, this library will only send events through the react native bridge when a fall is detected.
 
 ## Compatibility
 
